@@ -189,8 +189,8 @@ public partial class ControlledCapsuleCollider : ControlledCollider
         List<RaycastHit> raycastHits = new List<RaycastHit>(Physics.SphereCastAll(m_CapsuleTransform.GetPosition(), m_Radius - m_GroundedMargin, -m_CapsuleTransform.GetUpDirection(), (m_CapsuleTransform.GetLength() * 0.5f) + m_GroundedCheckDistance + m_GroundedMargin, m_LayerMask));
         m_State.UpdateGroundedInfo(raycastHits);
         
-        List<RaycastHit2D> raycastHits2D = new List<RaycastHit2D>(Physics2D.CircleCastAll(m_CapsuleTransform.GetPosition(), m_Radius - m_GroundedMargin, -m_CapsuleTransform.GetUpDirection(), (m_CapsuleTransform.GetLength() * 0.5f) + m_GroundedCheckDistance + m_GroundedMargin, m_LayerMask));
-        m_State.UpdateGroundedInfo2D(raycastHits2D);
+        //List<RaycastHit2D> raycastHits2D = new List<RaycastHit2D>(Physics2D.CircleCastAll(m_CapsuleTransform.GetPosition(), m_Radius - m_GroundedMargin, -m_CapsuleTransform.GetUpDirection(), (m_CapsuleTransform.GetLength() * 0.5f) + m_GroundedCheckDistance + m_GroundedMargin, m_LayerMask));
+        //m_State.UpdateGroundedInfo2D(raycastHits2D);
 
         List<RaycastHit> rightCastResults = CCState.CorrectCapsuleCastAll(GetDownCenter(true), GetUpCenter(true), GetRadius() - m_SideCastMargin, m_CapsuleTransform.GetRightDirection(), m_SideCastDistance + m_SideCastMargin, m_LayerMask);
         List<RaycastHit> leftCastResults = CCState.CorrectCapsuleCastAll(GetDownCenter(true), GetUpCenter(true), GetRadius() - m_SideCastMargin, -m_CapsuleTransform.GetRightDirection(), m_SideCastDistance + m_SideCastMargin, m_LayerMask);

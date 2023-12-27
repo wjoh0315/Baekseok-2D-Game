@@ -75,7 +75,7 @@ public class GroundedCharacterController : CharacterControllerBase
     protected override void UpdateController()
     {
         bool isGrounded = m_ControlledCollider.IsGrounded();
-        //Debug.Log(isGrounded);
+        Debug.Log(isGrounded);
         if (isGrounded)
         {
             m_LastGroundedTime = Time.fixedTime;
