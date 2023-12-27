@@ -9,8 +9,10 @@ using System.Collections;
 //--------------------------------------------------------------------
 public class CapsuleVolumeIntegrity : MonoBehaviour {
     [SerializeField] Rigidbody m_RigidBody;
+    [SerializeField] Rigidbody2D m_RigidBody2D;
     [SerializeField] ControlledCapsuleCollider m_ControlledCollider;
     [SerializeField] CapsuleCollider m_CapsuleCollider;
+    [SerializeField] CapsuleCollider2D m_CapsuleCollider2D;
     [SerializeField] float m_CheckDistance = 0.0f;
     [SerializeField] float m_SquishRadius = 0.0f;
     bool m_IsActive = true;
@@ -21,21 +23,23 @@ public class CapsuleVolumeIntegrity : MonoBehaviour {
     void Reset()
     {
         m_RigidBody = transform.GetComponent<Rigidbody>();
+        m_RigidBody2D = transform.GetComponent<Rigidbody2D>();
         m_ControlledCollider = transform.GetComponent<ControlledCapsuleCollider>();
         m_CapsuleCollider = transform.GetComponent<CapsuleCollider>();
+        m_CapsuleCollider2D = transform.GetComponent<CapsuleCollider2D>();
         m_CheckDistance = 0.02f;
         m_SquishRadius = 0.05f;
     }
     void Awake()
     {
-        if (m_ControlledCollider == null || m_CapsuleCollider == null || m_RigidBody == null)
+        if (m_ControlledCollider == null || /*m_ControlledCollider*/m_CapsuleCollider2D == null || /*m_RigidBody*/m_RigidBody2D == null)
         {
             Debug.LogError("Missing references on CapsuleVolumeIntegrity");
             enabled = false;
             return;
         }
 
-        m_CapsuleCollider.radius = m_ControlledCollider.GetRadius();
+        //m_CapsuleCollider.radius = m_ControlledCollider.GetRadius();
     }
     void FixedUpdate()
     {
@@ -49,12 +53,13 @@ public class CapsuleVolumeIntegrity : MonoBehaviour {
             m_IsBeingSquished = false;
         }
         //Apply ControlledCapsuleCollider transform
-        m_CapsuleCollider.height = m_ControlledCollider.GetLength() + m_ControlledCollider.GetRadius() * 2.0f;
+        //m_CapsuleCollider.height = m_ControlledCollider.GetLength() + m_ControlledCollider.GetRadius() * 2.0f;
+        m_CapsuleCollider2D.size = new Vector2(1, m_ControlledCollider.GetLength() + m_ControlledCollider.GetRadius() * 2.0f);
 
         //Detect collisions
-        if (m_RigidBody)
+        if (/*m_RigidBody*/m_RigidBody2D)
         {
-            m_RigidBody.MovePosition(transform.position);
+            /*m_RigidBody*/m_RigidBody2D.MovePosition(transform.position);
         }
     }
     void OnCollisionStay(Collision a_Collision)

@@ -25,10 +25,23 @@ public class CCState : CState
         return new List<RaycastHit>(raycastHits);
     }
 
+    public static List<RaycastHit2D> CorrectCapsuleCastAll2D(Vector2 a_Bot, Vector2 a_Top, Vector2 a_Size, Vector2 a_Direction,  CapsuleDirection2D capsuleDir, float a_Distance, LayerMask a_LayerMask)
+    {
+        RaycastHit2D[] raycastHits = Physics2D.CapsuleCastAll((a_Bot + a_Top) / 2, a_Size, capsuleDir, 0f, a_Direction, a_Distance, a_LayerMask);
+        return new List<RaycastHit2D>(raycastHits);
+    }
+
     public static bool CorrectCapsuleCast(Vector3 a_Bot, Vector3 a_Top, float a_Rad, Vector3 a_Direction, float a_Distance, LayerMask a_LayerMask)
     {
         return Physics.CapsuleCast(a_Bot, a_Top, a_Rad, a_Direction, a_Distance, a_LayerMask);
     }
+
+    public static bool CorrectCapsuleCast2D(Vector2 a_Bot, Vector2 a_Top, Vector2 a_Size, Vector2 a_Direction,  CapsuleDirection2D capsuleDir, float a_Distance, LayerMask a_LayerMask)
+    {
+        return Physics2D.CapsuleCast((a_Bot + a_Top) / 2, a_Size, capsuleDir, 0f, a_Direction, a_Distance, a_LayerMask);
+    }
+
+    
 
     public CCGroundedInfo m_GroundedInfo = new CCGroundedInfo();
     public CCSideCastInfo m_SideCastInfo = new CCSideCastInfo();
@@ -45,13 +58,28 @@ public class CCState : CState
         m_GroundedInfo.UpdateWithCollisions(a_RaycastHits);
     }
 
+    public void UpdateGroundedInfo2D(List<RaycastHit2D> a_RaycastHits)
+    {
+        m_GroundedInfo.UpdateWithCollisions2D(a_RaycastHits);
+    }
+
     public void UpdateSideCastInfo(List<RaycastHit> leftHitResults, List<RaycastHit> rightHitResults)
     {
         m_SideCastInfo.UpdateWithCollisions(leftHitResults, rightHitResults);
     }
 
+    public void UpdateSideCastInfo2D(List<RaycastHit2D> leftHitResults, List<RaycastHit2D> rightHitResults)
+    {
+        //m_SideCastInfo.UpdateWithCollisions2D(leftHitResults, rightHitResults);
+    }
+
     public void UpdateEdgeCastInfo()
     {
         m_EdgeCastInfo.UpdateWithCollisions();
+    }
+
+    public void UpdateEdgeCastInfo2D()
+    {
+        //m_EdgeCastInfo.UpdateWithCollisions2D();
     }
 }

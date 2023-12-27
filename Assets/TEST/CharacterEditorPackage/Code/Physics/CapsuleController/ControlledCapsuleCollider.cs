@@ -98,6 +98,7 @@ public partial class ControlledCapsuleCollider : ControlledCollider
             Vector3 margin = -direction * m_MovementCapsuleCastMargin;
 
             List<RaycastHit> hits = CCState.CorrectCapsuleCastAll(GetDownCenter() + margin, GetUpCenter() + margin, m_Radius, direction, distanceToTravel, m_LayerMask);
+            //List<RaycastHit2D> hits = CCState.CorrectCapsuleCastAll2D(GetDownCenter() + margin, GetUpCenter() + margin, new Vector2(2* m_Radius, m_Length + 2 * m_Radius), direction, CapsuleDirection2D.Vertical, distanceToTravel, m_LayerMask);
 
             bool blocked = false;
             for (int i = hits.Count - 1; i >= 0; i--)
@@ -187,10 +188,19 @@ public partial class ControlledCapsuleCollider : ControlledCollider
     {
         List<RaycastHit> raycastHits = new List<RaycastHit>(Physics.SphereCastAll(m_CapsuleTransform.GetPosition(), m_Radius - m_GroundedMargin, -m_CapsuleTransform.GetUpDirection(), (m_CapsuleTransform.GetLength() * 0.5f) + m_GroundedCheckDistance + m_GroundedMargin, m_LayerMask));
         m_State.UpdateGroundedInfo(raycastHits);
+        
+        List<RaycastHit2D> raycastHits2D = new List<RaycastHit2D>(Physics2D.CircleCastAll(m_CapsuleTransform.GetPosition(), m_Radius - m_GroundedMargin, -m_CapsuleTransform.GetUpDirection(), (m_CapsuleTransform.GetLength() * 0.5f) + m_GroundedCheckDistance + m_GroundedMargin, m_LayerMask));
+        m_State.UpdateGroundedInfo2D(raycastHits2D);
+
         List<RaycastHit> rightCastResults = CCState.CorrectCapsuleCastAll(GetDownCenter(true), GetUpCenter(true), GetRadius() - m_SideCastMargin, m_CapsuleTransform.GetRightDirection(), m_SideCastDistance + m_SideCastMargin, m_LayerMask);
         List<RaycastHit> leftCastResults = CCState.CorrectCapsuleCastAll(GetDownCenter(true), GetUpCenter(true), GetRadius() - m_SideCastMargin, -m_CapsuleTransform.GetRightDirection(), m_SideCastDistance + m_SideCastMargin, m_LayerMask);
         m_State.UpdateSideCastInfo(leftCastResults, rightCastResults);
         m_State.UpdateEdgeCastInfo();
+        
+        List<RaycastHit2D> rightCastResults2D = CCState.CorrectCapsuleCastAll2D(GetDownCenter(true), GetUpCenter(true), new Vector2(1, 2), m_CapsuleTransform.GetRightDirection(), CapsuleDirection2D.Vertical, m_SideCastDistance + m_SideCastMargin, m_LayerMask);
+        List<RaycastHit2D> leftCastResults2D = CCState.CorrectCapsuleCastAll2D(GetDownCenter(true), GetUpCenter(true), new Vector2(1, 2), -m_CapsuleTransform.GetRightDirection(), CapsuleDirection2D.Vertical, m_SideCastDistance + m_SideCastMargin, m_LayerMask);
+        //m_State.UpdateSideCastInfo2D(leftCastResults2D, rightCastResults2D);
+        //m_State.UpdateEdgeCastInfo2D();
     }
     public bool CanBeResized(float a_Length, CapsuleResizeMethod a_Method)
     {

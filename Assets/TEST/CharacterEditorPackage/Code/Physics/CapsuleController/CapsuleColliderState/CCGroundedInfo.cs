@@ -9,7 +9,9 @@ public class CCGroundedInfo : CGroundedInfo
 {
     ControlledCapsuleCollider m_CapsuleCollider;
     List<RaycastHit> m_ValidHits = new List<RaycastHit>();
+    List<RaycastHit2D> m_ValidHits2D = new List<RaycastHit2D>();
     RaycastHit m_MostValidHit;
+    RaycastHit2D m_MostValidHit2D;
     public void Init(ControlledCapsuleCollider a_CapsuleCollider)
     {
         m_CapsuleCollider = a_CapsuleCollider;
@@ -44,6 +46,40 @@ public class CCGroundedInfo : CGroundedInfo
                 {
                     shortestDistance = m_ValidHits[i].distance;
                     m_MostValidHit = m_ValidHits[i];
+                }
+            }
+            m_IsGrounded = true;
+        }
+    }
+
+    public void UpdateWithCollisions2D(List<RaycastHit2D> a_Collisions)
+    {
+        m_ValidHits2D.Clear();
+        m_IsGrounded = false;
+        Vector3 downCenter = m_CapsuleCollider.GetDownCenter();
+        //Discard all hitresults that are above the lower hemisphere (locally), or have an inacceptable angle (locally or globally)
+        for (int i = 0; i < a_Collisions.Count; i++)
+        {
+            float hitPointDot = Vector3.Dot(a_Collisions[i].point, Vector3.up);
+            float downCenterDot = Vector3.Dot(downCenter, Vector3.up);
+            float reqAngle = m_CapsuleCollider.GetMaxGroundedAngle();
+            float angle = Vector3.Angle(Vector3.up, a_Collisions[i].normal);
+            if (hitPointDot < downCenterDot && Mathf.Abs(angle) < reqAngle)
+            {
+                m_ValidHits2D.Add(a_Collisions[i]);
+            }
+        }
+
+        if (m_ValidHits2D.Count != 0)
+        {
+            float shortestDistance = m_ValidHits2D[0].distance;
+            m_MostValidHit2D = m_ValidHits2D[0];
+            for (int i = 1; i < m_ValidHits2D.Count; i++)
+            {
+                if (m_ValidHits2D[i].distance < shortestDistance)
+                {
+                    shortestDistance = m_ValidHits2D[i].distance;
+                    m_MostValidHit2D = m_ValidHits2D[i];
                 }
             }
             m_IsGrounded = true;
