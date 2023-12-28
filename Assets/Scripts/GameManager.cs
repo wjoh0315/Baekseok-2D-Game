@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text BlueChoco;
     public TMP_Text Keycard;
     public Animator FadeAnimator;
+    public GameObject ClearUI;
 
     int NowChoco_R = 0;
     int NowChoco_B = 0;
@@ -92,6 +93,8 @@ public class GameManager : MonoBehaviour
     {
         if (NowLevel <= 2)
             GoToStage(NowLevel + 1);
+        else
+            ClearUI.SetActive(true);
     }
 
     public void Restart()

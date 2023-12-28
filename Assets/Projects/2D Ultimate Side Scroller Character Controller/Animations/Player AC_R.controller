@@ -851,13 +851,13 @@ AnimatorStateMachine:
     m_Position: {x: 410, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2115749746697514797}
-    m_Position: {x: 410, y: -10, z: 0}
+    m_Position: {x: 410, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8561163628617560932}
     m_Position: {x: 410, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7884061365250974346}
-    m_Position: {x: 410, y: 110, z: 0}
+    m_Position: {x: 410, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2625544959473235051}
     m_Position: {x: 410, y: 170, z: 0}
