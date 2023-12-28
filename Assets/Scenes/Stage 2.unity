@@ -199,6 +199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (3)
@@ -209,11 +213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -429,7 +433,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 16
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
@@ -5461,7 +5465,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
-      value: 1.75
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762785, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: m_Controller
@@ -5536,17 +5544,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5886,7 +5898,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.21124065, g: 0.37130314, b: 0.4433962, a: 0}
+  m_BackGroundColor: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5941,6 +5953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (5)
@@ -5951,11 +5967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -6115,6 +6131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6172,6 +6192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (2)
@@ -6182,11 +6206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -6241,6 +6265,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (6)
@@ -6251,11 +6279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -6310,17 +6338,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6375,17 +6407,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6568,6 +6604,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1933496418, guid: bf299e105e7f6a84c94650af3503ebfa, type: 3}
     - target: {fileID: 768088068208936548, guid: a5a4991569be74440ad27fd33c354e72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 768088068208936548, guid: a5a4991569be74440ad27fd33c354e72, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 768088068208936548, guid: a5a4991569be74440ad27fd33c354e72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.47
       objectReference: {fileID: 0}
@@ -6694,7 +6738,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
-      value: 1.75
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762787, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: m_Name
@@ -6757,6 +6805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (4)
@@ -6767,11 +6819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -6955,17 +7007,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7081,17 +7137,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7146,6 +7210,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B (1)
@@ -7160,11 +7228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127762, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_LocalScale.z
@@ -7280,17 +7348,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268118322, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79792
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925102868360452041, guid: 1d6f1e107b9a0994194f55f484592c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7463,6 +7535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940682304, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1822779363877127760, guid: 2689bc320fd0bfd44a05babf82261316, type: 3}
       propertyPath: m_Name
       value: Teacher_B

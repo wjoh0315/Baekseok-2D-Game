@@ -604,7 +604,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19103774, g: 0.4367807, b: 0.5, a: 0}
+  m_BackGroundColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6470,6 +6470,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].jumpTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762785, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: m_Controller
       value: 
@@ -6543,6 +6555,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].jumpCutPower
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
+      propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762787, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: m_Name
       value: Player_R
@@ -6663,7 +6687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4794979210156686581, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.16
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 4794979210293064342, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
       propertyPath: m_Name
