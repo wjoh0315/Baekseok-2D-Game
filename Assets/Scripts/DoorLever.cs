@@ -6,9 +6,11 @@ public class DoorLever : MonoBehaviour
 {
     public Transform Door;
     public Transform target;
+    public Animator LeverAnimator;
     Vector3 Origin;
     Vector3 Target;
     bool isOpen = false;
+    bool isOpenMove = false;
     bool isActive = false;
     Collider2D Temp;
 
@@ -19,7 +21,7 @@ public class DoorLever : MonoBehaviour
     }
 
     private void Update() {
-        if (isOpen)
+        if (isOpenMove)
         {
             Door.position = Vector3.MoveTowards(Door.position, Target, Time.deltaTime);
             //Debug.Log(Door.position + " " + Target);
@@ -30,7 +32,22 @@ public class DoorLever : MonoBehaviour
         }
 
         if (isActive && ((Temp.tag == "Blue" && Input.GetKeyDown(KeyCode.S)) || (Temp.tag == "Red" && Input.GetKeyDown(KeyCode.DownArrow))))
+        {
             isOpen = !isOpen;
+            LeverAnimator.SetBool(isOpen ? "LeverUp" : "LeverDown", true);
+            LeverAnimator.SetBool(!isOpen ? "LeverUp" : "LeverDown", false);
+            Invoke(isOpen ? "isOpenMoveToTrue" : "isOpenMoveToFalse", 0.25f);
+        }
+    }
+
+    void isOpenMoveToTrue()
+    {
+        isOpenMove = true;
+    }
+
+    void isOpenMoveToFalse()
+    {
+        isOpenMove = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
