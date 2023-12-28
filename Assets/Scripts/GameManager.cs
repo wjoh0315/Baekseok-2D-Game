@@ -2,21 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public int NowLevel = 1;
-    public int ChocoToClear = 1;
+    public int lmitTime = 60;
+    public int ChocoToClear_R = 1;
+    public int ChocoToClear_B = 1;
     public bool isKeyCard = false;
+    public TMP_Text time;
+    public TMP_Text RedChoco;
+    public TMP_Text BlueChoco;
+    public TMP_Text Keycard;
 
-    int NowChoco = 0;
+    int NowChoco_R = 0;
+    int NowChoco_B = 0;
     int DoorOpened = 0;
     bool isGetKeycard = false;
+
+    float NowTime = 0;
+    int RoundTime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        BlueChoco.text = ChocoToClear_B.ToString();
+        RedChoco.text = ChocoToClear_R.ToString();
+
+        NowTime = lmitTime;
     }
 
     // Update is called once per frame
@@ -24,11 +38,27 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             Restart();
+        
+        if (NowTime <= 0)
+            Restart();
+
+        NowTime -= Time.deltaTime;
+        RoundTime = Mathf.RoundToInt(NowTime);
+        time.text = (RoundTime / 60).ToString() + ":" + (RoundTime % 60 < 10? "0" : "") + (RoundTime % 60).ToString();
     }
 
-    public void ChocoAdded()
+    public void ChocoAdded(bool isBlue)
     {
-        NowChoco += 1;
+        if (isBlue)
+        {
+            NowChoco_B++;
+            BlueChoco.text = (ChocoToClear_B - NowChoco_B).ToString();
+        }
+        else
+        {
+            NowChoco_R++;
+            RedChoco.text = (ChocoToClear_R - NowChoco_R).ToString();
+        }
     }
 
     public void SetDoor(bool isOpen)
@@ -38,7 +68,7 @@ public class GameManager : MonoBehaviour
         else
             DoorOpened -= 1;
 
-        if (DoorOpened >= 2 && NowChoco >= ChocoToClear)
+        if (DoorOpened >= 2 && NowChoco_R >= ChocoToClear_R && NowChoco_B >= ChocoToClear_B)
         {
             if (isKeyCard && !isGetKeycard)
                 return;
@@ -60,5 +90,6 @@ public class GameManager : MonoBehaviour
     public void GetKeyCard()
     {
         isGetKeycard = true;
+        Keycard.text = "0";
     }
 }

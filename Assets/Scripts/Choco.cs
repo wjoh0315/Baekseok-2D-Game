@@ -10,7 +10,7 @@ public class Choco : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if ((other.tag == "Red" && !isBlue) || (other.tag == "Blue" && isBlue))
         {
-            gameManager.ChocoAdded();
+            gameManager.ChocoAdded(other.tag == "Blue");
             Destroy(gameObject);
         }
     }
