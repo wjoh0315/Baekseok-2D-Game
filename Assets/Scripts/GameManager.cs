@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToStage(int level)
     {
-        SceneManager.LoadScene("Stage " + level);
+        SceneManager.LoadScene("Stage " + level + " Check");
     }
 
     public void GoToStartScene()

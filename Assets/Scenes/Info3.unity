@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1308359062}
-  NextScene: Stage 1
+  NextScene: Stage 1 Check
   IsDescription: 1
 --- !u!4 &85971304
 Transform:
