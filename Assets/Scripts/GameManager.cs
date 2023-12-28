@@ -15,11 +15,13 @@ public class GameManager : MonoBehaviour
     public TMP_Text RedChoco;
     public TMP_Text BlueChoco;
     public TMP_Text Keycard;
+    public Animator FadeAnimator;
 
     int NowChoco_R = 0;
     int NowChoco_B = 0;
     int DoorOpened = 0;
     bool isGetKeycard = false;
+    bool IsGameStart = false;
 
     float NowTime = 0;
     int RoundTime = 0;
@@ -31,11 +33,16 @@ public class GameManager : MonoBehaviour
         RedChoco.text = ChocoToClear_R.ToString();
 
         NowTime = lmitTime;
+        FadeAnimator.SetBool("FadeOut", true);
+        Invoke("GameStart", 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!IsGameStart)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
             Restart();
         
@@ -45,6 +52,11 @@ public class GameManager : MonoBehaviour
         NowTime -= Time.deltaTime;
         RoundTime = Mathf.RoundToInt(NowTime);
         time.text = (RoundTime / 60).ToString() + ":" + (RoundTime % 60 < 10? "0" : "") + (RoundTime % 60).ToString();
+    }
+
+    void GameStart()
+    {
+        IsGameStart = true;
     }
 
     public void ChocoAdded(bool isBlue)
@@ -90,6 +102,17 @@ public class GameManager : MonoBehaviour
     public void GoToStage(int level)
     {
         SceneManager.LoadScene("Stage " + level);
+    }
+
+    public void GoToStartScene()
+    {
+        SceneManager.LoadScene("Start");
+    }
+
+    public void FadeInvokeIn(string func)
+    {
+        FadeAnimator.SetBool("FadeIn", true);
+        Invoke(func, 1.25f);
     }
 
     public void GetKeyCard()
