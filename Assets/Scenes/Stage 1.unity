@@ -9804,7 +9804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
@@ -9938,7 +9938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2073330232
 RectTransform:
   m_ObjectHideFlags: 0
