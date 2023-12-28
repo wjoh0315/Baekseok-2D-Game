@@ -79,12 +79,17 @@ public class GameManager : MonoBehaviour
     void GameClear()
     {
         if (NowLevel <= 2)
-            SceneManager.LoadScene("Stage " + (NowLevel + 1));
+            GoToStage(NowLevel + 1);
     }
 
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToStage(int level)
+    {
+        SceneManager.LoadScene("Stage " + level);
     }
 
     public void GetKeyCard()
