@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Teacher : MonoBehaviour
 {
-    public bool isBlue = false;
+    public string teacherColor = "Red"; // Red Blue Green
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Teacher : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if ((other.tag == "Red" && isBlue) || (other.tag == "Blue" && !isBlue))
+        if ((other.tag == "Red" && teacherColor == "Blue") || (other.tag == "Blue" && teacherColor == "Red") || (teacherColor == "Green")) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
