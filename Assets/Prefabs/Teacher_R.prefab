@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2925102868360452041}
   - component: {fileID: 2925102868360452046}
-  - component: {fileID: 1268118322}
   - component: {fileID: 1268118323}
+  - component: {fileID: 544930194}
   m_Layer: 8
   m_Name: Teacher_R
   m_TagString: Teacher
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1268118322
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925102868360452047}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09}
-  serializedVersion: 2
-  m_Radius: 0.18
 --- !u!114 &1268118323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,4 +98,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279c1c0a77d442144b4eb90e31610c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBlue: 0
+  teacherColor: Red
+--- !u!60 &544930194
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925102868360452047}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.18}
+    newSize: {x: 0.36, y: 0.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09405802, y: 0.07086959}
+      - {x: -0.11855078, y: 0.047246393}
+      - {x: -0.15768118, y: 0.004927613}
+      - {x: -0.17999999, y: -0.089999996}
+      - {x: 0.17999999, y: -0.089999996}
+      - {x: 0.16086964, y: 0.0044927876}
+      - {x: 0.08492755, y: 0.07724636}

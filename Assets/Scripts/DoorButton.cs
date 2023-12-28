@@ -10,6 +10,7 @@ public class DoorButton : MonoBehaviour
     Vector3 Origin;
     Vector3 Target;
     public bool isOpen = false;
+    public bool isMulti = false;
     //bool isActive = false;
     string tempTag = "";
 
@@ -22,7 +23,7 @@ public class DoorButton : MonoBehaviour
     private void Update() {
         if (OtherButton != null)
         {
-            if (isOpen || OtherButton.isOpen)
+            if ((!isMulti && (isOpen || OtherButton.isOpen)) || (isMulti && (isOpen && OtherButton.isOpen)))
             {
                 Door.position = Vector3.MoveTowards(Door.position, Target, Time.deltaTime);
                 //Debug.Log(Door.position + " " + Target);
@@ -34,7 +35,7 @@ public class DoorButton : MonoBehaviour
 
             return;
         }
-
+        
         if (isOpen)
         {
             Door.position = Vector3.MoveTowards(Door.position, Target, Time.deltaTime);
