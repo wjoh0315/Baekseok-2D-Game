@@ -12,7 +12,7 @@ public class DoorButton : MonoBehaviour
     public bool isOpen = false;
     public bool isMulti = false;
     //bool isActive = false;
-    string tempTag = "";
+    //string tempTag = "";
 
     private void Awake()
     {
@@ -21,6 +21,10 @@ public class DoorButton : MonoBehaviour
     }
 
     private void Update() {
+        RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position + new Vector3(0, 0.3f, 0), Vector2.up, 0.5f);
+        Debug.DrawRay(this.gameObject.transform.position, Vector2.up*0.5f, Color.blue);
+        isOpen = hit.collider != null;
+        
         if (OtherButton != null)
         {
             if ((!isMulti && (isOpen || OtherButton.isOpen)) || (isMulti && (isOpen && OtherButton.isOpen)))
@@ -44,10 +48,10 @@ public class DoorButton : MonoBehaviour
         else
         {
             Door.position = Vector3.MoveTowards(Door.position, Origin, Time.deltaTime);
-        }
+        }        
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    /*private void OnTriggerEnter2D(Collider2D other) {
         isOpen = true;
         if (tempTag != "")
             return;
@@ -60,5 +64,5 @@ public class DoorButton : MonoBehaviour
             isOpen = false;
             tempTag = "";
         }
-    }
+    }*/
 }

@@ -9614,7 +9614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
-      value: 0.9
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
@@ -9804,7 +9804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].maxHeight
-      value: 0.9
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5808260163101762784, guid: 723226d845f5ac1419824fd8c9607f67, type: 3}
       propertyPath: PlayerData.Jump.Jumps.Array.data[0].timeScaleOnCut
@@ -10153,11 +10153,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979210156686581, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.03
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4794979210293064342, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
       propertyPath: m_Name
       value: DoorAndLever
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794979210293064342, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4794979210293064343, guid: dbbad5327a3f7d048a4dcbfa5736f146, type: 3}
       propertyPath: m_RootOrder
