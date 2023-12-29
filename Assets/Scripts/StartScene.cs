@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class StartScene : MonoBehaviour
 {
     public Animator animator;
+    public GameManager gameManager;
     public string NextScene;
     public bool IsDescription;
+    public bool isClearScene = false;
  
     void Start()
     {
@@ -22,7 +24,10 @@ public class StartScene : MonoBehaviour
         if (IsDescription)
             return;
 
-        if(Input.anyKeyDown)
+        if (isClearScene && Input.GetKeyDown(KeyCode.Escape))
+            gameManager.SetTotalTimeZero();
+
+        if((!isClearScene && Input.anyKeyDown) || (isClearScene && Input.GetKeyDown(KeyCode.Escape)))
             SceneEnd();
     }
 

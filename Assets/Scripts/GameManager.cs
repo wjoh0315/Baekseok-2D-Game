@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int ChocoToClear_R = 1;
     public int ChocoToClear_B = 1;
     public bool isKeyCard = false;
+    public bool isClearScene = false;
     public TMP_Text time;
     public TMP_Text RedChoco;
     public TMP_Text BlueChoco;
@@ -25,11 +26,21 @@ public class GameManager : MonoBehaviour
     bool IsGameStart = false;
 
     float NowTime = 0;
-    int RoundTime = 0;
+    //int RoundTime = 0;
+    int RoundTotalTime = 0;
+
+    static float totalTime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (isClearScene)
+        {
+            RoundTotalTime = Mathf.RoundToInt(totalTime);
+            time.text = (RoundTotalTime / 60).ToString() + ":" + (RoundTotalTime % 60 < 10? "0" : "") + (RoundTotalTime % 60).ToString();
+            return;
+        }
+
         BlueChoco.text = ChocoToClear_B.ToString();
         RedChoco.text = ChocoToClear_R.ToString();
 
@@ -41,7 +52,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsGameStart)
+        if (!IsGameStart || isClearScene)
             return;
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -50,9 +61,12 @@ public class GameManager : MonoBehaviour
         if (NowTime <= 0)
             Restart();
 
-        NowTime -= Time.deltaTime;
-        RoundTime = Mathf.RoundToInt(NowTime);
-        time.text = (RoundTime / 60).ToString() + ":" + (RoundTime % 60 < 10? "0" : "") + (RoundTime % 60).ToString();
+        //NowTime -= Time.deltaTime;
+        //RoundTime = Mathf.RoundToInt(NowTime);
+        //time.text = (RoundTime / 60).ToString() + ":" + (RoundTime % 60 < 10? "0" : "") + (RoundTime % 60).ToString();
+        totalTime += Time.deltaTime;
+        RoundTotalTime = Mathf.RoundToInt(totalTime);
+        time.text = (RoundTotalTime / 60).ToString() + ":" + (RoundTotalTime % 60 < 10? "0" : "") + (RoundTotalTime % 60).ToString();
     }
 
     void GameStart()
@@ -94,7 +108,7 @@ public class GameManager : MonoBehaviour
         if (NowLevel <= 2)
             GoToStage(NowLevel + 1);
         else
-            ClearUI.SetActive(true);
+            SceneManager.LoadScene("Clear");
     }
 
     public void Restart()
@@ -122,5 +136,10 @@ public class GameManager : MonoBehaviour
     {
         isGetKeycard = true;
         Keycard.text = "0";
+    }
+
+    public void SetTotalTimeZero()
+    {
+        totalTime = 0;
     }
 }
