@@ -17,6 +17,9 @@ OR
 Run the exe file to start the game
 
 ## Preview
+[Youtube](https://www.youtube.com/watch?v=GCJeLZg7Ik8)
+
+
 [![Video Label](http://img.youtube.com/vi/GCJeLZg7Ik8/0.jpg)](https://www.youtube.com/watch?v=GCJeLZg7Ik8)
 
 ## Screenshot
