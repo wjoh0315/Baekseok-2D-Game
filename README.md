@@ -16,6 +16,9 @@ OR
 
 Run the exe file to start the game
 
+## Preview
+[![Video Label](http://img.youtube.com/vi/GCJeLZg7Ik8/0.jpg)](https://www.youtube.com/watch?v=GCJeLZg7Ik8)
+
 ## Screenshot
 ![스크린샷 2023-12-30 143504](https://github.com/wjoh0315/REDBLUE-Unity2DGame/assets/65387631/e5a6fa18-5519-4b91-84ce-f978788da16b)
 ![스크린샷 2023-12-30 143511](https://github.com/wjoh0315/REDBLUE-Unity2DGame/assets/65387631/1406e426-bdb8-4fda-abf3-120cf89ccf89)
