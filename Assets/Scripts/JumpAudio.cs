@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class JumpAudio : MonoBehaviour
 {
-    public Animator animator;
+    /*public Animator animator;
     private AudioSource audioSource;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
+
+    void Update()
+    {
+    }*/
 }

@@ -11396,7 +11396,7 @@ GameObject:
   - component: {fileID: 2811453761579293228}
   - component: {fileID: 2811453761579293229}
   - component: {fileID: 2811453761579293230}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: DOOR_and_BUTTON_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}

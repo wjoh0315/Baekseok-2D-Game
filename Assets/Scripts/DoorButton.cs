@@ -21,8 +21,8 @@ public class DoorButton : MonoBehaviour
     }
 
     private void Update() {
-        RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position + new Vector3(0, 0.3f, 0), Vector2.up, 0.5f);
-        Debug.DrawRay(this.gameObject.transform.position, Vector2.up*0.5f, Color.blue);
+        RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position + new Vector3(0, 0.1f, 0), Vector2.up, 0.3f);
+        Debug.DrawRay(this.gameObject.transform.position + new Vector3(0, 0.1f, 0), Vector2.up*0.3f, Color.blue);
         isOpen = hit.collider != null;
         
         if (OtherButton != null)
@@ -43,7 +43,7 @@ public class DoorButton : MonoBehaviour
         if (isOpen)
         {
             Door.position = Vector3.MoveTowards(Door.position, Target, Time.deltaTime);
-            Debug.Log(Door.position + " " + Target);
+            //Debug.Log(Door.position + " " + Target);
         }
         else
         {
