@@ -1,15 +1,23 @@
 # REDBLUE
+"Fireboy and Watergirl"에 영감을 받아 제작한 유니티 2D 플랫포머<br/><br/>
+
 Unity 2D Platformer Game inspired by Fireboy and Watergirl
 
 ## Unity Version
 **2021.3.24f1 LTS**
 
 ## Introduction
+2인 협동으로 장애물을 피해 출구까지 도달하면 게임 클리어
+
+자신과 색이 다른 장애물에 닿으면 게임 오버<br/><br/>
+
 Two players must work together to avoid obstacles and reach the destination.
 
 Each player must avoid obstacles of a different color than themselves.
 
 ## How To Play?
+Assets/Scenes 폴더에서 "Start" 씬을 실행하거나 릴리즈 압축 파일을 열어 exe 파일 실행<br/><br/>
+
 Open Assets/Scenes Folder and Run "Start" Scene in Unity
 
 OR
