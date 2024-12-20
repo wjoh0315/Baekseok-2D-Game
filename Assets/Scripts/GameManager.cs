@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToStartScene()
     {
+        totalTime = 0;
         SceneManager.LoadScene("Start");
     }
 
